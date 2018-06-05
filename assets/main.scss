@@ -3,3 +3,12 @@
 ---
 
 @import "minima";
+
+.site-title, .site-title:visited {
+    color: #33ff33;
+}
+.footer-col-wrapper {
+    font-size: 15px;
+    color: #33ff33;
+    margin-left: -15px;
+}
