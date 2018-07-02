@@ -29,7 +29,52 @@
         <p>{{- site.description | escape -}}</p>
       </div>
     </div>
-
   </div>
+  <head>
+  <script>
+
+  function startTime() {
+    getDate();
+      var today = new Date();
+      var hour = today.getHours();
+      var min = today.getMinutes();
+      var sec = today.getSeconds();
+      min = checkTime(min);
+      sec = checkTime(sec);
+      document.getElementById('txt').innerHTML =
+      "    Current Time:  "+ hour + ":" + min + ":" + sec;
+      var t = setTimeout(startTime, 500);
+  }
+  function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+  }
+  function getDate(){
+    var now = new Date();
+
+    var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+
+    var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+    var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+
+    function fourdigits(number)	{
+    	return (number < 1000) ? number + 1900 : number;
+    								}
+    today =  days[now.getDay()] + ", " +
+             months[now.getMonth()] + " " +
+             date + ", " +
+             (fourdigits(now.getYear())) ;
+    document.getElementById("datetxt").innerHTML =today;
+  }
+  </script>
+  </head>
+
+  <body onload="startTime()";"getDate()">
+  <div id= "datetxt"></div>
+  <div id="txt"></div>
+
+  </body>
+
 
 </footer>
