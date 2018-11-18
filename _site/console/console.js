@@ -37,6 +37,8 @@ $(document).ready(function () {
     add("I'm also very involved in the robotics community. Robotics has become one of my passions in the last few years.");
     add_normal("<a target='_blank' href='robots/index.html'>Click here to view a list of my achievements in the field of robotics.</a>");
     add_normal("");
+    add_normal("<a target='_blank' href='CAD/index.html'>Click here to view some of my work on Autodesk Inventor.</a>");
+    add_normal("");
     add("And most of all, I'm a coder.")
     add("Trying to get in contact with me professionally?")
     add_normal("Check out my <a target='_blank' href='https://www.linkedin.com/in/minkyuyang'>LinkedIn</a>!")
