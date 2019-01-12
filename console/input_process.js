@@ -3,15 +3,12 @@ var commands = {
     help: '<br />      |*|*|*|  Minkyu OS 1.0 |*|*|*|<br /><br />List of available commands:<br />help - displays help text' +
     '<br />hello - say hello!' +
     '<br />email - get my email!' +
-    '<br />rick - hit him up for a good time' +
-    '<br />football - Vanderbilt Football record :(' +
-    '<br />secret - do you have the password?',
+    '<br />football - Vanderbilt Football record :(',
 
-    hello: 'Good morning!',
+    hello: 'zzz (say Hello Again!)',
+
     email: 'My email is <a href="mailto:minkyuyang99@gmail.com">minkyuyang99 dot gmail dot com</a> (avoiding bots since day 1)',
-    rick: '<a target = "_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Give him a shot :)</a>',
-    football: '<a target = "_blank" href = "http://www.espn.com/college-football/team/schedule/_/id/238/vanderbilt-commodores"> sad face </a>',
-    secret: 'This is the secret cOde thAt has been hiDing from you thiS whole time.',
+    football: '<a target = "_blank" href = "http://www.espn.com/college-football/team/schedule/_/id/238/vanderbilt-commodores"> ESPN</a>',
 };
 
 function type(/**/) { for (var i = 0; i < arguments.length; i++) $('#console_holder').append(arguments[i]); }
@@ -33,10 +30,24 @@ function assign() {
                     type(commands.help);
                     type("<div></div><br /><br />");
                 }
-                else {
-                    type("<div></div><br />");
-                    type(commands[command]);
-                    type("<div></div><br /><br />");
+                else{
+                  var today = new Date();
+                  var hour = today.getHours();
+                  if(hour<10)
+                  {
+                    commands[command] = 'Good Morning!';
+                  }
+                  else if (hour<14)
+                  {
+                    commands[command] = 'Good Afternoon!';
+                  }
+                  else
+                  {
+                    commands[command] = 'Good Evening!';
+                  }
+                  type("<div></div><br />");
+                  type(commands[command]);
+                  type("<div></div><br /><br />");
                 }
                 type("<div>> <input class=\"cmd\" name=\"command\" type=\"text\" placeholder=\"Type a command here...\"></input></div>");
                 assign();

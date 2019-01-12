@@ -32,7 +32,7 @@ $(document).ready(function () {
     add("Welcome to Minkyu's resume!");
     add("I was inspired by bash and console/terminal environments.")
     add("From here, you can browse links to my portfolio.");
-    add_normal("<a target='_blank' href='newspaper/'>Click here to follow the story of Q</a>");
+    add_normal("<a target='_blank' href='newspaper/'>Click here to follow the story of Minkyu (Q)</a>");
     add_normal("");
     add("I'm also very involved in the robotics community. Robotics has become one of my passions in the last few years.");
     add_normal("<a target='_blank' href='robots/index.html'>Click here to view a list of my achievements in the field of robotics.</a>");
