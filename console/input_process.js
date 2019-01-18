@@ -31,20 +31,6 @@ function assign() {
                     type("<div></div><br /><br />");
                 }
                 else{
-                  var today = new Date();
-                  var hour = today.getHours();
-                  if(hour<10)
-                  {
-                    commands[command] = 'Good Morning!';
-                  }
-                  else if (hour<14)
-                  {
-                    commands[command] = 'Good Afternoon!';
-                  }
-                  else
-                  {
-                    commands[command] = 'Good Evening!';
-                  }
                   type("<div></div><br />");
                   type(commands[command]);
                   type("<div></div><br /><br />");
