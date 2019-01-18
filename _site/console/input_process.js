@@ -5,7 +5,7 @@ var commands = {
     '<br />email - get my email!' +
     '<br />football - Vanderbilt Football record :(',
 
-    hello: 'zzz (say Hello Again!)',
+    hello: 'Hello',
 
     email: 'My email is <a href="mailto:minkyuyang99@gmail.com">minkyuyang99 dot gmail dot com</a> (avoiding bots since day 1)',
     football: '<a target = "_blank" href = "http://www.espn.com/college-football/team/schedule/_/id/238/vanderbilt-commodores"> ESPN</a>',
@@ -31,23 +31,11 @@ function assign() {
                     type("<div></div><br /><br />");
                 }
                 else{
-                  var today = new Date();
-                  var hour = today.getHours();
-                  if(hour<10)
-                  {
-                    commands[command] = 'Good Morning!';
-                  }
-                  else if (hour<14)
-                  {
-                    commands[command] = 'Good Afternoon!';
-                  }
-                  else
-                  {
-                    commands[command] = 'Good Evening!';
-                  }
-                  type("<div></div><br />");
-                  type(commands[command]);
-                  type("<div></div><br /><br />");
+
+                    type("<div></div><br />");
+                    type(commands[command]);
+                    type("<div></div><br /><br />");
+
                 }
                 type("<div>> <input class=\"cmd\" name=\"command\" type=\"text\" placeholder=\"Type a command here...\"></input></div>");
                 assign();
