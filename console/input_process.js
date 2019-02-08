@@ -3,12 +3,11 @@ var commands = {
     help: '<br />      |*|*|*|  Minkyu OS 1.0 |*|*|*|<br /><br />List of available commands:<br />help - displays help text' +
     '<br />hello - say hello!' +
     '<br />email - get my email!' +
-    '<br />football - Vanderbilt Football record :(',
+    '<br /><br />Simple A.I. coming SOON!',
 
     hello: 'Hello',
 
     email: 'My email is <a href="mailto:minkyuyang99@gmail.com">minkyuyang99 dot gmail dot com</a> (avoiding bots since day 1)',
-    football: '<a target = "_blank" href = "http://www.espn.com/college-football/team/schedule/_/id/238/vanderbilt-commodores"> ESPN</a>',
 };
 
 function type(/**/) { for (var i = 0; i < arguments.length; i++) $('#console_holder').append(arguments[i]); }
